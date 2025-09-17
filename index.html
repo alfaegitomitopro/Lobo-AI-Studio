@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lobo AI Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'background-primary': '#0D1117',
+                        'background-secondary': 'rgba(22, 27, 34, 0.7)',
+                        'background-tertiary': '#161B22',
+                        'text-primary': '#E6EDF3',
+                        'text-secondary': '#8B949E',
+                        'accent-primary': '#58A6FF',
+                        'accent-hover': '#7BCBFF',
+                        'border-color': '#30363D',
+                        'error-color': '#f85149',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(88, 166, 255, 0.3), 0 0 20px rgba(88, 166, 255, 0.2)',
+                    },
+                    keyframes: {
+                      spin: {
+                        '0%': { transform: 'rotate(0deg)' },
+                        '100%': { transform: 'rotate(360deg)' },
+                      },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: var(--background-primary, #0D1117);
+            background-image: radial-gradient(circle at 1px 1px, rgba(88, 166, 255, 0.1) 1px, transparent 0);
+            background-size: 2rem 2rem;
+            color: var(--text-primary, #E6EDF3);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #161B22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #30363D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #58A6FF;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
